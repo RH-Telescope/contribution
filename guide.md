@@ -1,4 +1,4 @@
-# ** Contribution Guide to Project Telescope **
+# Contribution Guide to Project Telescope
 
 Welcome! Are you interested in contributing to Project Telescope? This repository should assist you ingetting started. It contains information and guidelines about contributions to the Project.
 
