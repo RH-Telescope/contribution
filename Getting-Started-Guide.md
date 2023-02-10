@@ -2,9 +2,9 @@
 
 ## Pre-requisites:
 
- - Openshift 4.10 Cluster with the following operators (take defaults during operator install):
-  - Red Hat OpenShift GitOps, 1.5.8 provided by Red Hat Inc.
-  - Advanced Cluster Security for Kubernetes 3.73.1 provided by Red Hat
+- Openshift 4.10 Cluster with the following operators (take defaults during operator install):
+ - Red Hat OpenShift GitOps, 1.5.8 provided by Red Hat Inc.
+ - Advanced Cluster Security for Kubernetes 3.73.1 provided by Red Hat
 
 ##  CLI Tools installed:
 ### oc
