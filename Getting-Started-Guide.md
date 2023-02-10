@@ -12,6 +12,22 @@
 # subscription-manager repos --enable="rhocp-4.11-for-rhel-8-x86_64-rpms"
 # sudo yum install openshift-clients
 ```
+You can also install the CLI tool via your OpenShift WebUI.
+
+1. From the web console, click ?
+![Install From WebUI 1](images/oc-image-1.png)
+2. Click Command Line Tools
+![Install From WebUI 2](images/oc-image-2.png)
+
+3. Select appropriate oc binary for your Linux platform, and then click Download oc for Linux
+
+4. Save the final
+
+5. Unpack the archive
+```
+$ tar xvzf <file>
+```
+6. Move the oc binary to a directory that is on your PATH
 
 ### argocd
 ```
