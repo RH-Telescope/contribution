@@ -177,7 +177,7 @@ Bootstrapping Project Telescope can be completed with one simple command to defi
 Ensure the previously defined variables are still present and execute the following command to create the Argo CD _Application_ to deploy Project Telescope:
 
 ```shell
-cat <<EOF | envsubst | kubectl apply -f -
+cat <<EOF | envsubst | oc apply -f -
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
