@@ -36,11 +36,11 @@ The OpenShift CLI binary can be installed on Linux, OSX or Windows based machine
 
 To use the OpenShift Web Console as a method for obtaining the CLI, launch the web console and click the question mark dropdown on the toolbar. 
 
-![Selecting the Help Dropdown from the OpenShift Web Console](images/oc-image-1.png)
+![Selecting the Help Dropdown from the OpenShift Web Console](images/getting-started/oc-image-1.png)
 
 Select _Command Line Tools_.
 
-![Command Line Tools Page of the OpenShift Web Console](images/oc-image-2.png)
+![Command Line Tools Page of the OpenShift Web Console](images/getting-started/oc-image-2.png)
 
 Select the appropriate resource depending on your Operating System.
 
@@ -87,13 +87,13 @@ Navigate to OpenShift Web Console and within the _Administrator Perspective_, ex
 
 Search for **OpenShift GitOps** and select the tile when it appears.
 
-![OpenShift GitOps in OperatorHub](images/operatorhub-argocd-1.png).
+![OpenShift GitOps in OperatorHub](images/getting-started/operatorhub-argocd-1.png).
 
 Click **Install**.
 
 Select the desired Update Channel, approval strategy and then click **Install** to install the OpenShift GitOps Operator.
 
-![Install the OpenShift GitOps Operator](images/operatorhub-argocd-2.png).
+![Install the OpenShift GitOps Operator](images/getting-started/operatorhub-argocd-2.png).
 
 Once the operator has been deployed, all of the related resources will be configued within the `openshift-gitops` namespace.
 
@@ -247,7 +247,7 @@ Authenticate to Argo CD by selecting the **Log In Via OpenShift** button.
 
 Once authenticated, you will be presented with a dashboard of the deployed Argo CD applications which will appear similar to the following:
 
-![Project Telescope Argo CD Applications](images/argocd-applications.png)
+![Project Telescope Argo CD Applications](images/getting-started/argocd-applications.png)
 
 Take note that all _Applications_ are Synchronized and Healthy.
 
@@ -286,7 +286,7 @@ echo https://$(oc get route telescope-frontend -n telescope-$INSTANCE_NAME -o js
 
 Explore the current status of the security posture of your environment:
 
-![Project Telescope Frontend](images/project-telescope-frontend.png)
+![Project Telescope Frontend](images/getting-started/project-telescope-frontend.png)
 
 Congratulations! You have completed deploying Project Telescope to your OpenShift environment using tool including Helm and OpenShift GitOps!
 
