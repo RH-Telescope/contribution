@@ -15,11 +15,15 @@ The [Project Telescope Getting Started Guide](Getting-Started-Guide.md)) must be
 
 An _Integration_ is an external system that provides Security related information that can be consumed and visualized within Project Telescope. The external source must provide a method that Project Telescope can use to obtain information from the remote location. Adding an Integration to Project Telescope involves the following steps:
 
-1. Defining an Integration
+1. Defining an Integration Method
+
+An _Integration Method_ is used to link integrations to the integration code and provides the string which will be used in the Integration Accessor.  When you create an Integration, you can select the relevant Integration Method to use.
+
+2. Defining an Integration
 
 Creation of an Integration definition within the Project Telescope database with details related to accessing the resource (Endpoint location, credentials, etc)
 
-2. Deploying an Integration Accessor
+3. Deploying an Integration Accessor
 
 A process which queries the external component for security related details and stores the results into the Project Telescope database
 
@@ -141,7 +145,7 @@ _Note_: The above command assumes that the OpenShift environment is named `local
 
 ### Performing CIS Scanning Using the Compliance Operator
 
-The Compliance Operator can be used to scan various resources within an OpenShift environment in order to attest whether they comply with a variety of _Profiles_. Two CIS profiles, `ocp4-cis` and `ocp4-cis-node` are installed by default . Use the Compliance Operator to perform a scan of the OpenShift environment based on the policies defined within these profiles. 
+The Compliance Operator can be used to scan various resources within an OpenShift environment in order to attest whether they comply with a variety of _Profiles_. Two CIS profiles, `ocp4-cis` and `ocp4-cis-node` are installed by default . Use the Compliance Operator to perform a scan of the OpenShift environment based on the policies defined within these profiles.
 
 ```shell
 cat <<EOF | envsubst | oc apply -f -
@@ -177,6 +181,13 @@ With the scan started, wait until it completes.
 ```shell
 until [ "$(curl -sk -u admin:$ACS_PASSWORD https://$ACS_ENDPOINT/v1/complianceManagement/runs | jq -r '.complianceRuns[]|select(.id=="'"$SCAN_RUN_ID"'") | .state')" = "FINISHED" ]; do echo -n "."; sleep 1; done
 ```
+### Adding an Integration Method using Telescope Toggle
+Before adding a new Integration, you will need to add an _Integration Method_.  Once created, the name of the Integration Method and Id will be linked to your integration when added.
+
+![Adding an Integration Method](images/adding-integrations/add-integration-method.png)
+
+When added, the new Integration Method will be visible in the Integration Methods drop-down list.
+
 
 ### Adding the Integration using Telescope Toggle
 
