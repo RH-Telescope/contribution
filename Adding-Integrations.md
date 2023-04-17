@@ -186,8 +186,9 @@ Before adding a new Integration, you will need to add an _Integration Method_.  
 
 ![Adding an Integration Method](images/adding-integrations/add-integration-method.png)
 
-When added, the new Integration Method will be visible in the Integration Methods drop-down list.
+When added, the new Integration Method will be visible in the Integration Methods drop-down list.  
 
+If you are using the RHACS integration code from quay.io/telescope/telescope-integration-scripts-acs, you will require an Integration Method with the name ```telescopeComplianceRhacs```
 
 ### Adding the Integration using Telescope Toggle
 
@@ -199,10 +200,11 @@ export OCP4_RUN_RESULTS="https://$ACS_ENDPOINT/v1/compliance/runresults?standard
 
 Enter the following values into the _Add Integration_ form using the variables obtained in the prior sections:
 
-Integration Name: **RHACS Compliance Score**
-URL Endpoint: `$OCP4_RUN_RESULTS`
-Token: `$ACS_TELESCOPE_TOKEN`
-Success Criteria: **80**
+ - Integration Name: **RHACS Compliance Score**
+ - URL Endpoint: `$OCP4_RUN_RESULTS`
+ - Integration Method: **telescopeComplianceRhacs**
+ - Token: `$ACS_TELESCOPE_TOKEN`
+ - Success Criteria: **80**
 
 Click **Add Integration** to add the integration for Red Hat Advanced Cluster Security to the Project Telescope Database
 
