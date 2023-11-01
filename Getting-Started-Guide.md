@@ -126,8 +126,8 @@ Note: Elevated permissions, such as `cluster-admin` simplifies how OpenShift can
 Finally, grant any authenticated user to the Argo CD web console _admin_ access by patching the `ArgoCD` resource using the following command:
 
 ```shell
-oc apply --server-side=true -f - <<EOF
-apiVersion: argoproj.io/v1alpha1
+oc apply --server-side=true --force-conflicts -f - <<EOF
+apiVersion: argoproj.io/v1beta1
 kind: ArgoCD
 metadata:
   name: openshift-gitops
